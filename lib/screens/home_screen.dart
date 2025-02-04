@@ -55,15 +55,18 @@ class _HomeScreenState extends State<HomeScreen> {
   final List<Map<String, dynamic>> restaurants = [
     {
       'name': 'Yayoi (เซ็นทรัล)',
-      'image': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYBtAL47fs-4uRfrIUgJcAA-Ywa9jKfd6ekg&s',
+      'image':
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYBtAL47fs-4uRfrIUgJcAA-Ywa9jKfd6ekg&s',
       'distance': '5km',
       'time': '31min',
       'price': '฿4',
       'rating': 4.7,
       'discount': 'โค้ดลด 50%'
-    },{
+    },
+    {
       'name': 'ฮะจิบัง',
-      'image': 'https://yt3.googleusercontent.com/ytc/AIdro_n_rdfxvP1lrjylwdqVjG-Tz4IxTWPqi89smA-nGemt4Q=s900-c-k-c0x00ffffff-no-rj',
+      'image':
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQukFD8I8htD33IeH4YGlOUYf3tYv_floZ6xA&s',
       'distance': '5km',
       'time': '31min',
       'price': '฿4',
@@ -72,7 +75,8 @@ class _HomeScreenState extends State<HomeScreen> {
     },
     {
       'name': 'Sizzler',
-      'image': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8bSeuHkV8SJc8hdrTbfIvbsXRa_vvPdUAuw&s',
+      'image':
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8bSeuHkV8SJc8hdrTbfIvbsXRa_vvPdUAuw&s',
       'distance': '5km',
       'time': '31min',
       'price': '฿4',
@@ -81,7 +85,8 @@ class _HomeScreenState extends State<HomeScreen> {
     },
     {
       'name': 'McDonald',
-      'image': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeKYA9tULXVWOCATrkXVsxuF4pHIcM0J6goA&s',
+      'image':
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeKYA9tULXVWOCATrkXVsxuF4pHIcM0J6goA&s',
       'distance': '5km',
       'time': '31min',
       'price': '฿4',
@@ -89,7 +94,8 @@ class _HomeScreenState extends State<HomeScreen> {
       'discount': 'โค้ดลด 50%'
     },
     {
-      'name': 'ข้าวหมูแดงสีมรกต ซ.สุกร1 (ข้าวหมูแดงสีมรกต ซ.สุกร1 สาขาต้นตำรับ)',
+      'name':
+          'ข้าวหมูแดงสีมรกต ซ.สุกร1 (ข้าวหมูแดงสีมรกต ซ.สุกร1 สาขาต้นตำรับ)',
       'image': 'https://mpics.mgronline.com/pics/Images/562000012757401.JPEG',
       'distance': '5km',
       'time': '31min',
@@ -99,7 +105,8 @@ class _HomeScreenState extends State<HomeScreen> {
     },
     {
       'name': 'ข้าวหมูทอดอร่อยมาก (บางพลัด)',
-      'image': 'https://images.deliveryhero.io/image/fd-th/Products/10560115.jpg?width=%s',
+      'image':
+          'https://images.deliveryhero.io/image/fd-th/Products/10560115.jpg?width=%s',
       'distance': '7km',
       'time': '33min',
       'price': '฿17',
@@ -108,7 +115,8 @@ class _HomeScreenState extends State<HomeScreen> {
     },
     {
       'name': 'KFC (บางพลัด)',
-      'image': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdkERsanC5bN-wCtQGG82RprDPeQFQplDXjg&s',
+      'image':
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdkERsanC5bN-wCtQGG82RprDPeQFQplDXjg&s',
       'distance': '8km',
       'time': '12min',
       'price': '฿27',
@@ -130,9 +138,8 @@ class _HomeScreenState extends State<HomeScreen> {
   void _filterRestaurants(String query) {
     setState(() {
       filteredRestaurants = restaurants
-          .where((restaurant) => restaurant['name']
-              .toLowerCase()
-              .contains(query.toLowerCase()))
+          .where((restaurant) =>
+              restaurant['name'].toLowerCase().contains(query.toLowerCase()))
           .toList();
     });
   }
@@ -195,7 +202,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RestaurantDetailScreen(restaurant: restaurant),
+                            builder: (context) =>
+                                RestaurantDetailScreen(restaurant: restaurant),
                           ),
                         );
                       },
@@ -237,7 +245,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                   SizedBox(height: 8),
                                   Row(
                                     children: [
-                                      Icon(Icons.star, color: Colors.amber, size: 16),
+                                      Icon(Icons.star,
+                                          color: Colors.amber, size: 16),
                                       SizedBox(width: 4),
                                       Text(
                                         restaurant['rating'].toString(),
@@ -252,7 +261,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 8, vertical: 4),
                               decoration: BoxDecoration(
                                 color: Colors.deepOrange.withOpacity(0.1),
                                 borderRadius: BorderRadius.circular(8),
@@ -363,7 +373,8 @@ class RestaurantDetailScreen extends StatelessWidget {
                         ],
                       ),
                       Container(
-                        padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                         decoration: BoxDecoration(
                           color: Colors.deepOrange,
                           borderRadius: BorderRadius.circular(20),
@@ -384,7 +395,8 @@ class RestaurantDetailScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => MenuScreen(restaurant: restaurant),
+                          builder: (context) =>
+                              MenuScreen(restaurant: restaurant),
                         ),
                       );
                     },
@@ -461,13 +473,13 @@ class MenuScreen extends StatelessWidget {
               onPressed: () {
                 // Add to cart functionality
               },
-              child: Text('Add to Cart'),
               style: ElevatedButton.styleFrom(
                 minimumSize: Size(double.infinity, 50),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15),
                 ),
               ),
+              child: Text('Add to Cart'),
             ),
           ),
         ],
@@ -475,7 +487,8 @@ class MenuScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildMenuItem(BuildContext context, String title, String description, String price) {
+  Widget _buildMenuItem(
+      BuildContext context, String title, String description, String price) {
     return Card(
       margin: EdgeInsets.only(bottom: 16),
       child: ListTile(

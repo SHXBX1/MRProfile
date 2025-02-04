@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:modern_profile/components/profile_img.dart';
-import 'package:modern_profile/components/profile_menu.dart';
-import 'package:modern_profile/constant/constant.dart';
+// import 'package:modern_profile/components/profile_img.dart';
+// import 'package:modern_profile/components/profile_menu.dart';
+// import 'package:modern_profile/constant/constant.dart';
 import 'package:modern_profile/screens/editprofile_screen.dart';
 import 'home_screen.dart';
 
